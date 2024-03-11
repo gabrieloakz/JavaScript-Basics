@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #result {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Conversor de Temperaturas</h2>
+    
+    <button onclick="converterTemperatura()">Converter</button>
+
+    <script>
+        function converterTemperatura() {
+            var temperaturaCelsius = prompt("Digite a temperatura em graus Celsius (ºC):");
+
+            var temperaturaFahrenheit = (parseFloat(temperaturaCelsius) * 9/5) + 32;
+
+            var resultado = document.getElementById("result");
+            resultado.innerHTML = "Resultado: " + temperaturaCelsius + " ºC é igual a " + temperaturaFahrenheit.toFixed(2) + " ºF";
+        }
+    </script>
+
+    <div id="result"></div>
+
+</body>
+</html>
